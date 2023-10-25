@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import AddAuthorModal from "../components/AddAuthorModal";
 
 const Login = () => {
   const [loginData, setLoginData] = useState({});
@@ -94,10 +95,14 @@ const Login = () => {
       </Form>
 
       <div style={{ textAlign: "center", marginTop: "10px" }}>
+        <AddAuthorModal />
+      </div>
+
+      {/* <div style={{ textAlign: "center", marginTop: "10px" }}>
         <Button variant="dark" onClick={() => redirectForLoginWithGithub()}>
           LOGIN with GITHUB
         </Button>
-      </div>
+      </div> */}
     </>
   );
 };
