@@ -39,11 +39,11 @@ const AddAuthorModal = () => {
         const uploadAvatar = await uploadFile(file);
         const finalBody = {
           ...formData,
-          cover: uploadAvatar.img, //il nome è cover perché abbiamo usato questo nel modello
+          avatar: uploadAvatar.img, //il nome è cover perché abbiamo usato questo nel modello
         };
 
         const response = await fetch(
-          `${process.env.REACT_APP_SERVER_BASE_URL}/authors/create`,
+          `${process.env.REACT_APP_SERVER_BASE_URL}/authors`,
           {
             headers: {
               "Content-Type": "application/json",
